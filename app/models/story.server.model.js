@@ -40,6 +40,21 @@ var StorySchema = new Schema({
 		required: 'Please Pick a continent',
 		trim: true
 	},
+	content: {
+		type: String,
+		default:'',
+		trim: true
+	},
+	content2:{
+		type:String,
+		default: '',
+		trim: true
+	},
+	content3:{
+		type:String,
+		default: '',
+		trim: true
+	},
 	created: {
 		type: Date,
 		default: Date.now

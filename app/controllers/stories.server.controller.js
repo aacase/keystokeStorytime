@@ -6,7 +6,17 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors'),
 	Story = mongoose.model('Story'),
+	nodemailer = require('nodemailer'),
+
 	_ = require('lodash');
+
+var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'aacase@gmail.com',
+        pass: 'W%skippy1738'
+    }
+});
 
 /**
  * Create a Story
@@ -23,6 +33,23 @@ exports.create = function(req, res) {
 		} else {
 			res.jsonp(story);
 		}
+	});
+
+	var mailOptions = {
+	    from: 'Aaron Case ✔ <aacase@gmail.com>', // sender address
+	    to: 'Aaron Case ✔ <aacase@gmail.com>', // list of receivers
+	    subject: 'Hello ✔', // Subject line
+	    text: 'Hello world ✔', // plaintext body
+	    html: '<b>Hello world ✔</b>' // html body
+	};
+
+	// send mail with defined transport object
+	transporter.sendMail(mailOptions, function(error, info){
+	    if(error){
+	        console.log(error);
+	    }else{
+	        console.log('Message sent: ' + info.response);
+	    }
 	});
 };
 
