@@ -1,0 +1,87 @@
+<section data-ng-controller="StoriesController">
+    <div class="page-header">
+        <h1>New Story</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div ng-show="counter==0">
+                <div class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Create a title for your story" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="firstName">First Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="firstName" id="firstName" class="form-control" placeholder="What is your first firstName?" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Dog">Dog</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="dog" id="dog" class="form-control" placeholder="Pick a dog's name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="SuperHero">SuperHero</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="superHero" id="superHero" class="form-control" placeholder="SuperHero" required>
+                    </div>
+                </div>
+
+             </div>
+             <div ng-show="counter==1">
+                 <div class="form-group">
+                     <label class="control-label" for="continent">pick a continent</label>
+                    <div class="controls">
+                 <div class="radio">
+                 <label>
+                 <input type="radio" data-ng-model="continent" name="optionsRadios" id="optionsRadios1" value="North America" >
+                 North America
+                 </label>
+                 <label>
+                 <input type="radio" name="optionsRadios" data-ng-model="continent"  id="optionsRadios1" value="Asia" >
+                 Asia
+                 </label>
+                 <label>
+                 <input type="radio" name="optionsRadios" data-ng-model="continent"  id="optionsRadios1" value="South America" >
+                 South America
+                 </label>
+                 <label>
+                 <input type="radio" name="Australia"  data-ng-model="continent"  id="Australia" value="Australia">
+                 Australia
+                 </label>
+                 <label>
+                 <input type="radio" name="optionsRadios"  data-ng-model="continent"  id="optionsRadios1" value="Europe" >
+                 Europe
+                 </label>
+                 <label>
+                 <input type="radio" name="optionsRadios" data-ng-model="continent"  id="optionsRadios1" value="Africa" >
+                 Africa
+                 </label>
+
+                 <label>
+                 <input type="radio" name="optionsRadios" data-ng-model="continent"  id="optionsRadios1" value="option1" >
+                 Antarctica
+                 </label>
+                 </div>
+            </div>
+        </div>
+
+             </div>
+                <button ng-click="counterDown()">Prev</button>
+                 <button ng-click="counterUp()">Next</button>
+
+              
+                <div class="form-group" ng-show="counter==3">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
