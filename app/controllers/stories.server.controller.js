@@ -32,9 +32,6 @@ exports.create = function(req, res) {
 			});
 		} else {
 			res.jsonp(story);
-		}
-	});
-
 	var mailOptions = {
 	    from: 'Aaron Case ✔ <aacase@gmail.com>', // sender address
 	    to: req.user.email, // list of receivers
@@ -54,6 +51,9 @@ exports.create = function(req, res) {
 	        console.log('Message sent: ' + info.response);
 	    }
 	});
+		}
+	});
+
 };
 
 /**
