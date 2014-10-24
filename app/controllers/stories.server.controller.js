@@ -35,8 +35,8 @@ exports.create = function(req, res) {
 	var mailOptions = {
 	    from: 'Aaron Case ✔ <aacase@gmail.com>', // sender address
 	    to: req.user.email, // list of receivers
-	    subject: 'Hello ✔', // Subject line
-	    text: 'Hello world ✔', // plaintext body
+	    subject: 'Your Story From Keystoke Storytime!', // Subject line
+	    text: story.content+" "+story.content2+ " "+story.content3, // plaintext body
 	    html: "<h1>Here's that kickass story you made on Keystoke Storytime!</h1>\
 	    <p>"+story.content+"</p>\
 	    <p>"+story.content2+"</p>\

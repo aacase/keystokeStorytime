@@ -2,6 +2,7 @@
     <div class="page-header">
         <h1>New Story</h1>
     </div>
+    <h4> Great News! Your're about to embark on your very own choose your own adventure. Once it's done, we'll post it to our site, and you'll get a copy in your email inbox over at {{authentication.user.email}}</h4>
     <div class="col-md-12">
         <form class="form-horizontal" data-ng-submit="create()" novalidate>
             <fieldset>
@@ -13,9 +14,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label" for="firstName">First Name</label>
+                    <label class="control-label" for="firstName">What's your Name?</label>
                     <div class="controls">
-                        <input type="text" data-ng-model="firstName" id="firstName" class="form-control" placeholder="What is your first firstName?" required>
+                        <input type="text" data-ng-model="firstName" id="firstName" class="form-control" placeholder="It's probably {{authentication.user.displayName}}, but you can make this about anyone you want" value="{{authentication.user.displayName}}" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -98,15 +99,16 @@
 
              </div>
                 <button ng-show="counter >0"ng-click="counterDown()">Prev</button>
-                 <button ng-show="counter <3" ng-click="counterUp()">Next</button>
+                <button ng-show="counter <2" ng-click="counterUp()">Next</button>
+                <button ng-show="counter >1" ng-click="counterUp()">Submit</button>
 
               
-                <div class="form-group" ng-show="counter==2">
+               <!--  <div class="form-group" ng-show="counter==2">
                     <input type="submit" class="btn btn-default">
+                </div> -->
+                <div data-ng-show="error" class="text-danger">
+                    <strong data-ng-bind="error"></strong>
                 </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
             </fieldset>
         </form>
     </div>
