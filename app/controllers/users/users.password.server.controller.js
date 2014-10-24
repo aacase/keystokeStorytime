@@ -167,7 +167,14 @@ exports.reset = function(req, res, next) {
 		},
 		// If valid email, send reset email using service
 		function(emailHTML, user, done) {
-			var smtpTransport = nodemailer.createTransport(config.mailer.options);
+			var smtpTransport = 
+				nodemailer.createTransport({
+				    service: 'Gmail',
+				    auth: {
+				        user: 'aaronnodemailer@gmail.com',
+				        pass: 'skippy1738'
+				    }
+				});
 			var mailOptions = {
 				to: user.email,
 				from: config.mailer.from,
