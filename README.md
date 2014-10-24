@@ -16,7 +16,7 @@ The phonegap build is available here:
 
 The submission process for the quiz is being completed automatically due to the way pagination is currently set up. I'm working on a fix for this now.
 
-The update function is half working, meaning that the records are updating to the DB, but they are not being reflected into the compiled version of the story. I'm looking into this. 
+The update function is half working, meaning that the records are updating to the DB, but they are not being reflected into the compiled version of the story. I'm looking into this. Edit: functionality is working, but I'd like to clean it up a bit. There is redundant code there.
 
 ## Prerequisites taken straight from the MEAN.js repo
 Make sure you have installed all these prerequisites on your development machine.
