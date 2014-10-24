@@ -11,6 +11,7 @@ If you'd like to check out a live version of the app, you can do so here:
 [Keystoke Storytime](http://keystokestorytime.herokuapp.com/)
 
 The phonegap build is available here:
+https://github.com/aacase/keystokePhonegap
 
 ##Known Issues:
 
