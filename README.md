@@ -1,4 +1,6 @@
-[![Keystoke Logo](http://keystoke.com/wp-content/uploads/2014/08/keystokelogo1.png)](http://keystoke.com/)##StoryTime!
+[![Keystoke Logo](http://keystoke.com/wp-content/uploads/2014/08/keystokelogo1.png)](http://keystoke.com/)
+
+## Keystoke StoryTime!
 
 
 
