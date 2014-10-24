@@ -122,6 +122,9 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 				$scope.dog = '';
 				$scope.superHero='';
 				$scope.continent='';
+				$scope.content='';
+				$scope.content2='';
+				$scope.content3='';
 
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
