@@ -13,7 +13,7 @@ var mongoose = require('mongoose'),
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'aacase@gmail.com',
+        user: 'aaronnodemailer@gmail.com',
         pass: 'W%skippy1738'
     }
 });
