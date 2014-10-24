@@ -37,10 +37,13 @@ exports.create = function(req, res) {
 
 	var mailOptions = {
 	    from: 'Aaron Case ✔ <aacase@gmail.com>', // sender address
-	    to: 'Aaron Case ✔ <aacase@gmail.com>', // list of receivers
+	    to: req.user.email, // list of receivers
 	    subject: 'Hello ✔', // Subject line
 	    text: 'Hello world ✔', // plaintext body
-	    html: '<b>Hello world ✔</b>' // html body
+	    html: "<h1>Here's that kickass story you made on Keystoke Storytime!</h1>\
+	    <p>"+story.content+"</p>\
+	    <p>"+story.content2+"</p>\
+	    <p>"+story.content3+"</p>"// html body
 	};
 
 	// send mail with defined transport object
