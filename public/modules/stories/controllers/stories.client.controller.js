@@ -18,7 +18,7 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 
 		$scope.firstParagraph=function () {
 			var story = $scope.story ;
-			story.content= "So there you are, yeah you, "+story.firstName+" \
+			story.content= "So there you are, yeah you, "+story.firstName+"\
 				. Just minding your business, walking that awesome pooch of yours, "+story.dog+"\
 				. It's a lovely day and you are spending it taking in the scenery at the hike and\
 				 bike trail by the river. All of the sudden, you hear a loud bang, and all hell \
@@ -31,7 +31,7 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 				 Those colege psych classes taught you enough to realize that you're just \
 				 having a weird dream. Upon this realization, you wake up safe and sound in your bed.\
 				  That loud boom you heard? Yeah, that's your neighbor playing Call of Duty. \
-				  That vision of waking up in "+story.continent+" You've got a business trip coming up.\
+				  That vision of waking up in "+story.continent+"? You've got a business trip coming up.\
 				   Probably just nerves. "+story.superHero+"? You were reading that comic before bed. \
 				   And "+story.dog+"? He's sleeping peacefully at your feet. You realize it's Monday \
 				   morning and the weekend is over. That's the real nightmare."
@@ -64,7 +64,7 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 
 			else if (story.continent=="North America"){
 				story.content2="You come to after hearing a crowd of people chanting 'Let's go Cowboys!'. \
-				You realize that you're on the 50 yard line of thier stadium, and a massive group of \
+				You realize that you're on the 50 yard line of their stadium, and a massive group of \
 				football players are running towards you at a high rate of speed. Just before your're \
 				about to be obliterated,"+ story.superHero+" yanks you out of the way. 'You need to be \
 				more careful,'"+story.superHero+" says."
@@ -129,7 +129,7 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 				 Those colege psych classes taught you enough to realize that you're just \
 				 having a weird dream. Upon this realization, you wake up safe and sound in your bed.\
 				  That loud boom you heard? Yeah, that's your neighbor playing Call of Duty. \
-				  That vision of waking up in "+this.continent+" You've got a business trip coming up.\
+				  That vision of waking up in "+this.continent+"? You've got a business trip coming up.\
 				   Probably just nerves. "+this.superHero+"? You were reading that comic before bed. \
 				   And "+this.dog+"? He's sleeping peacefully at your feet. You realize it's Monday \
 				   morning and the weekend is over. That's the real nightmare."
@@ -164,7 +164,7 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 
 			else if (story.continent=="North America"){
 				story.content2="You come to after hearing a crowd of people chanting 'Let's go Cowboys!'. \
-				You realize that you're on the 50 yard line of thier stadium, and a massive group of \
+				You realize that you're on the 50 yard line of their stadium, and a massive group of \
 				football players are running towards you at a high rate of speed. Just before your're \
 				about to be obliterated,"+ story.superHero+" yanks you out of the way. 'You need to be \
 				more careful,'"+story.superHero+" says."
